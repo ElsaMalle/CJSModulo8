@@ -1,4 +1,7 @@
 {
+    "usage:": {
+        "generar_token": "Para poder acceder a las APIs privadas, es necesario generar un token JWT utilizando el comando 'npm run token' en la terminal. Este comando ejecutará el archivo 'generarToken.js', que generará un token JWT con una duración de 24 horas. El token generado se mostrará en la consola y se puede copiar para su uso en las solicitudes a los endpoints privados de la API."
+    },
     "project_info": {
         "title": "API Backend Node Express",
         "objective": "Implementar aplicaciones empresariales que disponibilizan API rest node/express",
