@@ -1,0 +1,71 @@
+{
+    "project_info": {
+        "title": "API Backend Node Express",
+        "objective": "Implementar aplicaciones empresariales que disponibilizan API rest node/express",
+        "description": "Desarrollar una aplicación empresarial que implemente una API REST utilizando Node.js y Express, que disponga de endpoints para operaciones CRUD para gestionar pacientes de centro médico, sobre un arreglo en memoria, permita la subida de archivos y se proteja mediante autenticación JWT.",
+        "delivery_type": "Enlace de Github con código fuente",
+        "duration_minutes": 120,
+        "group_size": "Grupal"
+    },
+    "api_specification": {
+        "public_endpoints": [
+            {
+                "path": "/login",
+                "method": "POST",
+                "description": "Autenticación de usuario y generación de token JWT"
+            },
+            {
+                "path": "/acerca",
+                "method": "GET",
+                "description": "Información pública sobre lo que hace la API"
+            }
+        ],
+        "private_endpoints": {
+            "security_requirement": "Protección mediante JWT (validación y manejo de expiración)",
+            "routes": [
+                {
+                    "path": "/pacientes",
+                    "method": "GET",
+                    "description": "Lista los pacientes de la clínica"
+                },
+                {
+                    "path": "/medicos",
+                    "method": "GET",
+                    "description": "Lista los médicos de la clínica"
+                },
+                {
+                    "path": "/subir-examen",
+                    "method": "POST",
+                    "description": "Permite subir exámenes médicos",
+                    "restrictions": "Solo archivos PDF",
+                    "storage": "Ubicación definida en el servidor"
+                },
+                {
+                    "path": "/archivos",
+                    "method": "GET",
+                    "description": "Lista los nombres de los archivos subidos al servidor"
+                }
+            ]
+        }
+    },
+    "technical_requirements": {
+        "persistence": "Arreglo en memoria",
+        "allowed_file_types": [
+            "PDF"
+        ],
+        "http_status_codes_required": [
+            200,
+            201,
+            400,
+            401,
+            404,
+            500
+        ],
+        "validation_rules": [
+            "Campos requeridos",
+            "Tipos de datos",
+            "Estructuras JSON",
+            "Validación de extensión de archivos"
+        ]
+    }
+}
